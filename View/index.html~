@@ -28,7 +28,7 @@
 
 		<!-- Header -->
 			<header id="header" class="alt">
-				<h1><a href="index.html">The AI Valet</a> by HTML5 UP</h1>
+				<h1><a href="index.html">Alpha</a> by HTML5 UP</h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
@@ -56,8 +56,8 @@
 
 		<!-- Banner -->
 			<section id="banner">
-				<h2>The AI valet</h2>
-				<p>Allows you to create personalised voice commands for your own tasks.</p>
+				<h2>Alpha</h2>
+				<p>Another fine responsive site template freebie by HTML5 UP.</p>
 				<ul class="actions">
 					<li><a href="#" class="button special">Sign Up</a></li>
 					<li><a href="#" class="button">Learn More</a></li>
