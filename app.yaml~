@@ -1,0 +1,39 @@
+application: api-project-1041270573801
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /css
+  static_dir: css
+
+- url: /css/ie
+  static_dir: css/ie
+
+- url: /css/ie/images
+  static_dir: css/ie/images
+
+- url: /css/images
+  static_dir: css/images
+
+- url: /js
+  static_dir: js
+
+- url: /images
+  static_dir: images
+
+- url: /fonts
+  static_dir: fonts
+
+- url: /.*
+  script: index.application
+
+libraries:
+
+- name: webapp2
+  version: latest
+
+- name: jinja2
+  version: latest
