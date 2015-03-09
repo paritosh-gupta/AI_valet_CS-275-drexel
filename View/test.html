@@ -3,9 +3,12 @@
 	<title>API Example</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--<script type="text/javascript">-->
+        <!--for a=0-->
+        <!--</script>-->
 	<script type="text/javascript">
 
-		var accessToken = "54019354670c497d93bc7f54eb92895c";
+        var accessToken = "4d92af3045e4428996cf80cf1a2dcb32";
 		var subscriptionKey = "bc83b78d-00be-46f0-bf45-fb563b397624";
 		var baseUrl = "https://api.api.ai/v1/";
 
@@ -24,6 +27,7 @@
 		var recognition;
 
 		function startRecognition() {
+
 			recognition = new webkitSpeechRecognition();
 			recognition.onstart = function(event) {
 				updateRec();

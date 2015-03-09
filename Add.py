@@ -8,11 +8,11 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     autoescape=True)
 
 
-class Display(webapp2.RequestHandler):
+class Add(webapp2.RequestHandler):
     def get(self):
-	  template = JINJA_ENVIRONMENT.get_template('View/index.html')
+	  template = JINJA_ENVIRONMENT.get_template('View/Add.html')
 	  self.response.write(template.render())
 
 application = webapp2.WSGIApplication([
-    ('/', Display),
+    ('/Add', Add),
 ], debug=True)

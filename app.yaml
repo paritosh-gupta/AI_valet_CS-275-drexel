@@ -27,6 +27,12 @@ handlers:
 - url: /fonts
   static_dir: fonts
 
+- url: /Add.*
+  script: Add.application
+
+- url: /index
+  script: index.application
+
 - url: /.*
   script: index.application
 
