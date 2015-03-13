@@ -30,6 +30,9 @@ handlers:
 - url: /Add.*
   script: Add.application
 
+- url: /Process.*
+  script: Process.application
+
 - url: /index
   script: index.application
 
