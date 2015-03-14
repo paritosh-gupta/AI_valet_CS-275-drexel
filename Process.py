@@ -21,9 +21,9 @@ class Process(webapp2.RequestHandler):
         words=speechText.split(" ")
         for word in words:
             if databaseHandler.search(word)!="NULL":
-                print "found word" + word
+                print "word found" + word
             else:
-                print "absent word" + word
+                print "word not found" + word
 
 application = webapp2.WSGIApplication([
     ('/Process', Process),
