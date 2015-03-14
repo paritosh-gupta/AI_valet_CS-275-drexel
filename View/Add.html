@@ -17,6 +17,35 @@
     <script src="js/skel.min.js"></script>
     <script src="js/skel-layers.min.js"></script>
     <script src="js/init.js"></script>
+    <script type="text/javascript">
+
+        $(function() {
+            var count = 0;
+
+            $('#addElement').click(function (e) {
+
+                e.preventDefault();
+                count++;
+                 var dummy = "<div class=\"6u 12u(mobilep)\">\r\n  " +
+                    "<input type=\"text\"  name=\"name"+count+"\" id=\"name"+count+"\"  value=\"\" placeholder=\"Term Name\" \/>\r\n" +
+                    "<\/div>\r\n" +
+
+                    "<div class=\"6u 12u(mobilep)\">\r\n" +
+                    "<input type=\"text\" name=\"value"+count+"\" id=\"value"+count+"\" value=\"\" placeholder=\"Value\" \/>\r\n" +
+                    "<\/div>";
+                                alert(dummy);
+//
+//                document.getElementById('rows').innerHTML += dummy;
+            });
+
+        });
+
+
+    </script>
+
+
+
+
     <noscript>
         <link rel="stylesheet" href="css/skel.css" />
         <link rel="stylesheet" href="css/style.css" />
@@ -68,57 +97,69 @@
             <!-- Form -->
             <section class="box">
                 <h3>Form</h3>
-                <form method="post" action="#">
-                    <div class="row uniform 50%">
-                        <div class="6u 12u(mobilep)">
-                            <input type="text" name="name" id="name" value="" placeholder="Term_Name" />
-                        </div>
-                        <div class="6u 12u(mobilep)">
-                            <input type="email" name="email" id="email" value="" placeholder="Email" />
+                <form method="post" action="#" name="form">
+                    <div id='rows'>
+                        <div class="row uniform 50%">
+                            <div class="6u 12u(mobilep)">
+                                <input type="text" name="name" id="name" value="" placeholder="Term Name" />
+                            </div>
+                            <div class="6u 12u(mobilep)">
+                                <input type="email" name="email" id="value" value="" placeholder="Value" />
+                            </div>
+                            <div class="6u 12u(mobilep)">
+                                <input type="text" name="synonyms" id="synonyms" value="" placeholder="synonyms" />
+                            </div>
+                            <div class="6u 12u(mobilep)">iyou
+                                <input type="text" name="description" id="description" value="" placeholder="description" />
+                            </div>
+
+                            <div class="12u 12u(mobilep)">
+                                <input type="button" name="addElement" id="addElement" value="+"  />
+                            </div>
                         </div>
                     </div>
+                    <!--&lt;!&ndash;<div class="row uniform 50%">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="12u">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="select-wrapper">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<select name="category" id="category">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="">- Category -</option>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="1">Manufacturing</option>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="1">Shipping</option>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="1">Administration</option>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<option value="1">Human Resources</option>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</select>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
                     <!--<div class="row uniform 50%">-->
-                        <!--<div class="12u">-->
-                            <!--<div class="select-wrapper">-->
-                                <!--<select name="category" id="category">-->
-                                    <!--<option value="">- Category -</option>-->
-                                    <!--<option value="1">Manufacturing</option>-->
-                                    <!--<option value="1">Shipping</option>-->
-                                    <!--<option value="1">Administration</option>-->
-                                    <!--<option value="1">Human Resources</option>-->
-                                <!--</select>-->
-                            <!--</div>-->
-                        <!--</div>-->
+                    <!--<div class="4u 12u(narrower)">-->
+                    <!--<input type="radio" id="priority-low" name="priority" checked>-->
+                    <!--<label for="priority-low">Low Priority</label>-->
                     <!--</div>-->
-                    <div class="row uniform 50%">
-                        <div class="4u 12u(narrower)">
-                            <input type="radio" id="priority-low" name="priority" checked>
-                            <label for="priority-low">Low Priority</label>
-                        </div>
-                        <div class="4u 12u(narrower)">
-                            <input type="radio" id="priority-normal" name="priority">
-                            <label for="priority-normal">Normal Priority</label>
-                        </div>
-                        <div class="4u 12u(narrower)">
-                            <input type="radio" id="priority-high" name="priority">
-                            <label for="priority-high">High Priority</label>
-                        </div>
-                    </div>
-                    <div class="row uniform 50%">
-                        <div class="6u 12u(narrower)">
-                            <input type="checkbox" id="copy" name="copy">
-                            <label for="copy">Email me a copy of this message</label>
-                        </div>
-                        <div class="6u 12u(narrower)">
-                            <input type="checkbox" id="human" name="human" checked>
-                            <label for="human">I am a human and not a robot</label>
-                        </div>
-                    </div>
-                    <div class="row uniform 50%">
-                        <div class="12u">
-                            <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
-                        </div>
-                    </div>
+                    <!--<div class="4u 12u(narrower)">-->
+                    <!--<input type="radio" id="priority-normal" name="priority">-->
+                    <!--<label for="priority-normal">Normal Priority</label>-->
+                    <!--</div>-->
+                    <!--<div class="4u 12u(narrower)">-->
+                    <!--<input type="radio" id="priority-high" name="priority">-->
+                    <!--<label for="priority-high">High Priority</label>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row uniform 50%">-->
+                    <!--<div class="6u 12u(narrower)">-->
+                    <!--<input type="checkbox" id="copy" name="copy">-->
+                    <!--<label for="copy">Email me a copy of this message</label>-->
+                    <!--</div>-->
+                    <!--<div class="6u 12u(narrower)">-->
+                    <!--<input type="checkbox" id="human" name="human" checked>-->
+                    <!--<label for="human">I am a human and not a robot</label>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="row uniform 50%">-->
+                    <!--<div class="12u">-->
+                    <!--<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>-->
+                    <!--</div>-->
+                    <!--</div>-->
                     <div class="row uniform">
                         <div class="12u">
                             <ul class="actions">

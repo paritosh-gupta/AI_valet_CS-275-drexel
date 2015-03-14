@@ -15,9 +15,9 @@ class Process(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('View/Add.html')
         self.response.write(template.render())
     def post(self):
-        json = self.request.get("name")
+        json = self.request.get("json")
         print json
-        webapp2.redirect("/nope")
+        self.redirect("/nope")
 
 
 
