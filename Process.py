@@ -20,10 +20,15 @@ class Process(webapp2.RequestHandler):
         speechText = self.request.get("json")
         words=speechText.split(" ")
         for word in words:
-            if databaseHandler.search(word)!="NULL":
-                print "word found" + word
+            entry=databaseHandler.search(word)
+            if (entry)!="NULL":
+                if(entry.action[0]!="/"):
+                    if(entry.action[0-3]!="http"):
+                        self.redirect("http://"+str(entry.action))
+                else:
+                    self.redirect(entry.action)
             else:
-                print "word not found " + word
+                print "word not found" + word
 
 application = webapp2.WSGIApplication([
     ('/Process', Process),

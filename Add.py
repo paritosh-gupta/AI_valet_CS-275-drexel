@@ -19,11 +19,13 @@ class Add(webapp2.RequestHandler):
             databaseHandler=Database()
             databaseHandler.search()
         else:
-            name = self.request.get("name")
-            command =self.request.get("command")
+            command = self.request.get("command")
+            action =self.request.get("action")
+            parameters=self.request.get("parameters")
             description =self.request.get("description")
             databaseHandler = Database()
-            databaseHandler.insert(name,command,description)
+            databaseHandler.insert(command,action,parameters,description)
+            self.redirect("/Add")
 
 
 application = webapp2.WSGIApplication([
