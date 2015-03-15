@@ -23,7 +23,7 @@ class Process(webapp2.RequestHandler):
             if databaseHandler.search(word)!="NULL":
                 print "word found" + word
             else:
-                print "word not found" + word
+                print "word not found " + word
 
 application = webapp2.WSGIApplication([
     ('/Process', Process),
