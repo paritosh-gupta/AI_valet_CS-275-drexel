@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Google App Engine SDK" type="python">
+  <library name="Google App Engine SDK">
     <CLASSES>
       <root url="file://$USER_HOME$/Software/google_appengine" />
       <root url="file://$USER_HOME$/Software/google_appengine/lib/concurrent" />
