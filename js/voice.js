@@ -58,7 +58,7 @@ function updateRec() {
 }
 function send() {
     var text = $("#input").val();
-    postToPython("/Process",{json: text});
+        postToPython("/Process",{json: text});
 }
 function postToPython(path, params, method) {
     method = method || "post"; // Set method to post by default if not specified.

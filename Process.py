@@ -13,8 +13,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 class Process(webapp2.RequestHandler):
     def get(self):
-        template = JINJA_ENVIRONMENT.get_template('View/Add.html')
-        self.response.write(template.render())
+        self.redirect("/")
     def post(self):
         databaseHandler= Database()
         speechText = self.request.get("json")
@@ -22,13 +21,16 @@ class Process(webapp2.RequestHandler):
         for word in words:
             entry=databaseHandler.search(word)
             if (entry)!="NULL":
+                print "url=" + entry.action
                 if(entry.action[0]!="/"):
                     if(entry.action[0-3]!="http"):
                         self.redirect("http://"+str(entry.action))
+                    else:
+                        self.redirect(str(entry.action))
                 else:
                     self.redirect(entry.action)
             else:
-                print "word not found" + word
+                print "word not found " + word
 
 application = webapp2.WSGIApplication([
     ('/Process', Process),

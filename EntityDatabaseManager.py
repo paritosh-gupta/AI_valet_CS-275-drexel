@@ -44,10 +44,9 @@ class Database():
         commands = command_search.fetch(100)
 
         for element in commands:
+            # print "e = " + element.command.lower() + " q = " + query.lower()
             if( element.command.lower() ==  query.lower()):
                 return element
-            else:
-                return "NULL"
 
         return "NULL"
 

@@ -8,6 +8,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+BASE_URL="http://myaivalet.appspot.com"
 
 class Add(webapp2.RequestHandler):
     def get(self):
@@ -25,7 +26,7 @@ class Add(webapp2.RequestHandler):
             description =self.request.get("description")
             databaseHandler = Database()
             databaseHandler.insert(command,action,parameters,description)
-            self.redirect("/Add")
+            self.redirect(BASE_URL+"/Add")
 
 
 application = webapp2.WSGIApplication([
