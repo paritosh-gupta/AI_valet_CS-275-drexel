@@ -1,0 +1,9 @@
+{
+    "com.manueldeveloper.speech-recognizer": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/manueldeveloper/cordova-plugin-speech-recognizer.git",
+            "subdir": "."
+        }
+    }
+}
